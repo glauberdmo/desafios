@@ -1,4 +1,3 @@
-from numpy.core.numeric import outer
 from StringTools.text_breaker import TextBreaker
 from StringTools.file_reader import *
 
