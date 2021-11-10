@@ -1,13 +1,13 @@
 # Desafio 1: Strings
 
 ## Descrição da solução
-Foi pedido que desenvolvesse um meio de quebrar uma string em um tamanho parametrizado, para isso foi desenvolvida uma classe TextBreaker
+Foi pedido que desenvolvesse um meio de quebrar uma string em um tamanho parametrizado, para isso foi desenvolvida uma classe TextBreaker.
 	
 ## Setup
 Para rodar esse projeto clone o repositório e siga os exemplos de uso:
 
 ```
-    #initializes a new TextBreaker object
+    # O construtor da classe recebe o texto e tamanho por linha
     OutputText = TextBreaker(text_to_break,40)    
 
     #Escolha o alinhamento
