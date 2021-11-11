@@ -41,6 +41,9 @@ class TextBreaker:
 
     def _break_to_rows(self)->list:
         #Breaks the text into rows
+        #empty list
+        self.rows = []
+        
         for word in self.words:
             if not self.rows: 
                 #Initializes the first row
