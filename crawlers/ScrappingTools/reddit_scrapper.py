@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import time
-from .special_casting import string_to_int_with_k
+
 
 #Reddit URLs
 OLD_REDDIT_URL ='https://old.reddit.com/r/'
@@ -57,13 +57,24 @@ class RedditScrapper():
     def _getSoup(self,subreddit:str):
         #Gets the soup object
         self.soup = BeautifulSoup(self.subreddit_html,'html.parser')
+    
+
+    def _format_votes(self,str_number)->int:        
+        #Solve possible formating issues getting votes.        
+        if str_number == '•' or str_number == None:
+            return 0 
+        elif str_number.endswith('k'):
+            str_number = str_number[:-1]
+            return int(str_number.replace('.', '')) * 100
+        else:
+            return int(str_number)
 
     def _extract_thread_data(self,soup:object):
         #Gets thread list
         TreadList = soup.find_all(THREAD_LIST[0], THREAD_LIST[1])
         for thread in TreadList:
-            thread_votes = string_to_int_with_k(thread.find(THREAD_VOTES[0], THREAD_VOTES[1]).text)
-
+            thread_votes = self._format_votes(thread.find(THREAD_VOTES[0], THREAD_VOTES[1]).text)
+            a = thread.find(THREAD_TITLE[0], THREAD_TITLE[1])
             if thread_votes > VOTES_THRESHOLD:
                 title = thread.find(THREAD_TITLE[0], THREAD_TITLE[1]).text
                 thread_link = thread.attrs[THREAD_LINK]
@@ -76,7 +87,3 @@ class RedditScrapper():
                 self.thread_data.append({'title':title,'votes':thread_votes,'thread_link':thread_link,'comments_link':thread_comments_link})
             else: 
                 continue
-
-           
-        
-
