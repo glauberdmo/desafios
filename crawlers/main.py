@@ -1,7 +1,7 @@
-from ScrappingTools.reddit_scrapper import RedditScrapper
+from reddit_bot.reddit_scraper import RedditScraper
 
 if __name__=="__main__":
-    scrapper = RedditScrapper()
-    scrapper.get_sub_reddit('rocketleague')
-    scrapper.print()
+    Scraper = RedditScraper()
+    Scraper.get_sub_reddit('rocketleague')
+    Scraper.print()
 
