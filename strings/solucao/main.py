@@ -16,4 +16,4 @@ if __name__ == "__main__":
     OutputText.print_rows()
 
     #return by item
-    print(OutputText[0])
+    #print(OutputText[0])
