@@ -21,11 +21,11 @@ To use this app is needed:
 - [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
 - [GIT](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
-## building app
+## Building app
 
 ### Clone project
 
-clone project:
+Clone project:
 ```
 $ git clone https://github.com/glauberdmo/desafios.git
 ```
@@ -36,7 +36,7 @@ First create a bot through telegram app talking with @botfather, if you don't kn
 you will need to make this step to get his token with telegram API
 
 ### Creates a new app in heroku:
-`you can skip this section if wants to run it locally through docker or use other container based service`
+**you can skip this section if wants to run it locally through docker or use other container based service**
 ```
 $ heroku apps:create [APP]
 ```
