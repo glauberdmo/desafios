@@ -53,7 +53,7 @@ docker build --tag telegram-bot .
 docker run -e TOKEN=TELEGRAM_API_TOKEN_HERE -dp 80:80 telegram-bot
 ```
 note: Heroku are not compatible with docker compose
-Access your [localhost]https://localhost:80 to start the bot
+Access your [localhost](https://localhost:80) to start the bot
 
 ### Deploying through Heroku
 First you need go to ``Dockerfile`` and change ``80`` -> ``$PORT`` in row 11. Heroku define one port by dyno and needs to control it dynamically.
