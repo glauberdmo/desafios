@@ -14,6 +14,7 @@ The packages used in this project were:
 
 Package versions used and dependencies are listed ``requirements.txt`` 
 
+<a id="Packages">1</a>
 ### 💿 softwares
 To use this app is needed:
 - [python3](https://www.python.org/downloads/)
@@ -77,4 +78,17 @@ To use the bot, send a message command follow this format:
 the subrredits names can be separated with any symbol, except "_"
 
 
-![Screenshot](img/using_snoospiderbot.gif)
+![Screenshot]()
+<table border="0">
+ <tr>
+    <td><b style="font-size:30px">Title</b></td>
+    <td><b style="font-size:30px">Title 2</b></td>
+ </tr>
+ <tr>
+    <td>This application creates a telegram bot who scrap subredddits fetching threads with too many upvotes.</br> 
+    Was made as part of a challenge proposed by IdWall</br>
+    <a href="#packages">Click here to see the content below.</a>    
+    </td>
+    <td><img src="img/using_snoospiderbot.gif"></td>
+ </tr>
+</table>
