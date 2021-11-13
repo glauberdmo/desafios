@@ -1,18 +1,16 @@
 from telegram.ext import Updater, CommandHandler
 import os
 from chat_request import get_request_result
+from flask import Flask
 
 #env variables defined in heroku
 TOKEN = os.getenv("TOKEN")
 
 #images
-IMAGE_SNOO_WINKING = "https://i.ibb.co/Sfq91Fv/snoo.png"
+IMAGE_SNOOSPIDER = "https://i.ibb.co/M9R6qg6/snoospider.png"
 
-
-from flask import Flask
-
+#Initializes the boot through /
 app = Flask(__name__)
-
 @app.route('/')
 def hello():
     main()
@@ -37,7 +35,7 @@ def help(update, context):
     Envie:\n <code><b>/NadaPraFazer</b> SubReddit1; SubRed2...</code>
     Ou:\n <code><b>/npf</b> SubReddit1; SubReddit2...</code>
     \nVocê receberá só threads <b>BOMBÁSTICOS</b>
-    Exemplo:\n /npf rocketLeague; AskScience""" + f"<a href='{IMAGE_SNOO_WINKING}'>.</a>"
+    Exemplo:\n /npf rocketLeague; AskScience""" + f"<a href='{IMAGE_SNOOSPIDER}'>.</a>"
 
     update.message.reply_text(text=texto,parse_mode="HTML")
 
