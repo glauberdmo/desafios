@@ -1,24 +1,12 @@
-#Grab the latest alpine image
-FROM python:latest
+FROM python:3.7
 
-# Install python and pip
-RUN apk add --no-cache --update python3 py3-pip bash
-ADD ./webapp/requirements.txt /tmp/requirements.txt
+RUN mkdir /app
+ADD /app /app
+WORKDIR /app
 
-# Install dependencies
-RUN pip3 install --no-cache-dir -q -r /tmp/requirements.txt
+COPY requirements.txt requirements.txt
 
-# Add our code
-ADD ./reddit_bot /opt/reddit_bot/
-WORKDIR /opt/reddit_bot
+RUN pip install -r requirements.txt
 
-# Expose is NOT supported by Heroku
-# EXPOSE 5000 		
+CMD python /app/bot.py
 
-# Run the image as a non-root user
-RUN adduser -D myuser
-USER myuser
-
-# Run the app.  CMD is required to run on Heroku
-# $PORT is set by Heroku			
-CMD ["bot_actions.py", "-flag"]

@@ -4,15 +4,19 @@ import re
 #Image used when no hot threads are found
 IMAGE_SNOO_SAD = "https://i.redd.it/okvqywqn2jd31.png"
 
-def _get_chat_request(message:str)->list[str]:
+def _get_chat_request(message:str):
     """
     Return valid subreddits and their respective contents
-    needs to receive a message in the form of:
-    /nadaPraFazer subreddit1; subreddit2; subreddit3
+    needs to receive a message in this possible formats:
+    /nadaPraFazer | /npf subreddit1 <anySymbolExcept"_"> subreddit2 <anySymbolExcept"_"> subreddit3..
     """
-    #get just subreddits  
-    subreddits = re.split('; |, |;|,|# | |- ',message)[1:]
-    
+    #get just subreddits
+    subreddits = []  
+    for sub in message:        
+        subreddits.append(re.sub(r'[^\w]', '', sub))
+
+    #subreddits = re.split('; |, |;|,|# |\s+ |- ',"".join(message))
+    print(subreddits)
     #list of reddits
     reddit_list = []    
     
@@ -27,13 +31,14 @@ def _get_chat_request(message:str)->list[str]:
             continue
         reddit_list.append(Scraper.as_list())
         
-    return reddit_list
+    return subreddits, reddit_list
 
 def get_request_result(reddit_list:str)->str:
     answer:list[str] = []
-    subreddits = _get_chat_request(reddit_list)
+    subreddit_name, subreddits = _get_chat_request(reddit_list)
     if subreddits is not None:
-        for sub in subreddits:
+        for i, sub in enumerate(subreddits):
+            answer.append(f"<b>{subreddit_name[i]}</b>")
             for thread in sub:    
                 #avoid adding the same thread link twice when link is not external    
                 if 'www.reddit.com' in thread['thread_link']:
