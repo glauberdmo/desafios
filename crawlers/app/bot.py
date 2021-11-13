@@ -4,10 +4,22 @@ from chat_request import get_request_result
 
 #env variables defined in heroku
 TOKEN = os.getenv("TOKEN")
-PORT = int(os.getenv("PORT"))
 
 #images
 IMAGE_SNOO_WINKING = "https://i.ibb.co/Sfq91Fv/snoo.png"
+
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def hello():
+    main()
+    return 'Bot running...'
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
 
 #Command handlers
 def get_hot_subreddits(update, context):
@@ -40,13 +52,14 @@ def main():
     updater.dispatcher.add_handler(CommandHandler("help", help))
 
     #webhook
-    updater.start_webhook(listen="0.0.0.0",
-                          port=int(PORT),
-                          url_path=TOKEN,               
-                          webhook_url = 'https://telegram-bot-challenge.herokuapp.com/' + TOKEN)
+    #updater.start_webhook(listen="0.0.0.0",
+    #                      port=int(PORT),
+    #                      url_path=TOKEN,               
+    #                      webhook_url = 'https://telegram-bot-challenge.herokuapp.com/' + TOKEN)
     
     #stay idle until receive a signal from telegram
-    updater.idle()
+    #updater.idle()
 
-if __name__ == '__main__':
-    main()
+    updater.start_polling()
+
+    
