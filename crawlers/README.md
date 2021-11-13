@@ -81,10 +81,6 @@ the subrredits names can be separated with any symbol, except "_"
 ![Screenshot]()
 <table border="0">
  <tr>
-    <td><b style="font-size:30px">Title</b></td>
-    <td><b style="font-size:30px">Title 2</b></td>
- </tr>
- <tr>
     <td>This application creates a telegram bot who scrap subredddits fetching threads with too many upvotes.</br> 
     Was made as part of a challenge proposed by IdWall</br>
     <a href="#packages">Click here to see the content below.</a>    
