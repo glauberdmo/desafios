@@ -1,4 +1,4 @@
-from reddit_bot.reddit_scraper import RedditScraper
+from app.reddit_scraper import RedditScraper
 
 # uses this file to run through CLI
 if __name__=="__main__":

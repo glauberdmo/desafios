@@ -2,7 +2,6 @@ from bs4 import BeautifulSoup
 import requests
 import time
 
-
 #Reddit URLs
 OLD_REDDIT_URL ='https://old.reddit.com/r/'
 NEW_REDDIT_URL = 'https://www.reddit.com'

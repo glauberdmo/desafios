@@ -14,6 +14,8 @@ def get_hot_subreddits(update, context):
     """send a message with all hot threads from subreddits requested"""
     results = get_request_result(context.args)
     for result in results:
+         if not result:
+             result = "você digitou algo errado ):"        
          update.message.reply_text(text=result,parse_mode="HTML")   
          
 def help(update, context):

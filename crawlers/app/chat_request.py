@@ -29,7 +29,8 @@ def _get_chat_request(message:str):
         #verifies if subreddit exists
         if not Scraper.subreddit_exists:
             continue
-        reddit_list.append(Scraper.as_list())
+        else:
+            reddit_list.append(Scraper.as_list())
         
     return subreddits, reddit_list
 
@@ -49,6 +50,5 @@ def get_request_result(reddit_list:str)->str:
                 votes_HTML = f"<i>Votes:</i> {thread['votes']}"
                 answer.append(title_HTML + '\n'+ votes_HTML + '\n'+ link_to_comments_HTML + '\n\n')
     if answer == []:
-        answer.append("Nada bombando no momento" + f"<a href='{IMAGE_SNOO_SAD}'>.</a>"
-)
+        answer.append("Nada bombando no momento" + f"<a href='{IMAGE_SNOO_SAD}'>.</a>")
     return answer
