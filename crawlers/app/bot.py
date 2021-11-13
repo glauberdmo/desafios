@@ -1,9 +1,6 @@
 from telegram.ext import Updater, CommandHandler
-from telegram import parsemode
 import os
 from chat_request import get_request_result
-import telebot
-import html
 
 #env variables defined in heroku
 TOKEN = os.getenv("TOKEN")
@@ -11,8 +8,6 @@ PORT = int(os.getenv("PORT"))
 
 #images
 IMAGE_SNOO_WINKING = "https://i.ibb.co/Sfq91Fv/snoo.png"
-
-Bot = telebot.TeleBot(TOKEN)
 
 #Command handlers
 def get_hot_subreddits(update, context):
@@ -47,7 +42,8 @@ def main():
                           port=int(PORT),
                           url_path=TOKEN,               
                           webhook_url = 'https://telegram-bot-challenge.herokuapp.com/' + TOKEN)
-    #The pooling
+    
+    #stay idle until receive a signal from telegram
     updater.idle()
 
 if __name__ == '__main__':
