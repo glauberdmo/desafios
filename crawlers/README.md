@@ -5,7 +5,7 @@
 This application creates a telegram bot who scrap subredddits fetching threads with too many upvotes.</br>
 This app is part of a challenge proposed by Id Wall</br></br>
 
-<table border="0">
+<table class="center" border="0" style="border: 1px solid transparent">
  <tr valign="top"><td>    
     <b>Table of contents:</b></br>
     <a href="#packages">1 Packages</a></br>
