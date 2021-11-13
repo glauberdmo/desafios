@@ -1,4 +1,4 @@
-![Screenshot](img/snoospider_bot.png)
+![Screenshot](img/snoospider_bot2.png)
 
 ## 📝 Description
 
