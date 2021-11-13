@@ -3,10 +3,11 @@
 ## 📝 Description
 
 This application creates a telegram bot who scrap subredddits fetching threads with too many upvotes.</br>
-Was made as part of a challenge proposed by IdWall</br>
+This app is part of a challenge proposed by Id Wall</br></br>
+
 <table border="0">
- <tr>    
-    Table of contents:</br>
+ <tr valign="top"><td>    
+    <b>Table of contents:</b></br>
     <a href="#packages">1 Packages</a></br>
     <a href="#Software">2 Software required</a></br>
     <a href="#BuildingApp">3 Application setup</a> </br>
@@ -17,7 +18,7 @@ Was made as part of a challenge proposed by IdWall</br>
     <a href="#BuildingApp_4">3.4 Heroku Deployment</a></br> 
     <a href="#BuildingApp_4_1">3.4.1 Creating a new app in heroku</a></br> 
     <a href="#BuildingApp_4_2">3.4.2 Deploying through Heroku</a></br> 
-    <a href="#Using">5 Using the bot in a chat</a></br>  
+    <a href="#Using">5 Using the bot in a chat</a>
     </td>
     <td><img src="img/using_snoospiderbot.gif"></td>
  </tr>
