@@ -28,7 +28,7 @@ This app is part of a challenge proposed by Id Wall</br></br>
 The packages used in this project were:
 - **requests**: gets the page content as html 
 - **beautiful Soup**: allows the navigation and extraction of relevant page contents
-- **python-telegram-bot**: framework that implements telegram API to handle requests through pooling or webhook
+- **python-telegram-bot**: framework that implements telegram API to handle requests through pooling or webhook (was used pooling in this project)
 - **Flask**: the docker container run in a heroku service using a free account who shutdown with 30 min of innactivity, was used flask to route a resource that can wake up the service easily
 - **Gunicorn**: process incoming HTTP requests `concurrently`. the built-in Flask web server has `blocking` behavior and stops to answer while scraping is being executed
 
