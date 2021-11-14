@@ -88,7 +88,7 @@ in your bash:
 ```
 heroku container:push web -a telegram-bot-challenge
 ```
-The last cmd calls the docker to create a new image and push to heroku service. We need to create a new image because the PORT change. If you know some way to improve it, open a issue!
+The last cmd calls the docker to create a new image and pushes it to heroku service. We need to create a new image to consider the PORT we changed. If you know some way to improve it, open a issue!
 Makes the deployment
 ```
 heroku container:release web -a telegram-bot-challenge
@@ -96,7 +96,7 @@ heroku container:release web -a telegram-bot-challenge
 Access your app website to wake up the bot.
 
 ## 4 🕹 Using the bot in a chat<a id="Using"></a>
-To use the bot, send a message command follow this format: 
+To use the bot, send a message command following this format: 
 ```
 /npf | /nadaprafazer subrredit_name1 subrredit_name2 ...
 ```
