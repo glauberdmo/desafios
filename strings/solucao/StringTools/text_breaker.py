@@ -66,7 +66,7 @@ class TextBreaker:
         rand_position:int = 0
 
         #Freeze random seed
-        random.seed(0)
+        random.seed(1)
 
         for i, row in enumerate(self.rows):
             space_left = self.row_length - len(row)
