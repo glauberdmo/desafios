@@ -2,7 +2,7 @@
 
 ## 📝 Description
 
-This application creates a telegram bot who scrap subredddits fetching threads with too many upvotes.</br>
+This application creates a telegram bot who scrap subredddits, fetching threads with more than 5k upvotes.</br>
 This app is part of a challenge proposed by Id Wall</br></br>
 
 <center><table class="center" border="0" style="border: 1px solid transparent">
@@ -32,7 +32,7 @@ The packages used in this project were:
 - **Flask**: the docker container run in a heroku service using a free account who shutdown with 30 min of innactivity, was used flask to route a resource that can wake up the service easily
 - **Gunicorn**: process incoming HTTP requests `concurrently`. the built-in Flask web server has `blocking` behavior and stops to answer while scraping is being executed
 
-Package versions used and dependencies are listed ``requirements.txt`` 
+Package versions used and dependencies are listed at ``requirements.txt`` 
 
 
 ### 2 💿 softwares required<a id="Software"></a>
