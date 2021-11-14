@@ -17,6 +17,7 @@ def _get_chat_request(message:str):
 
     #subreddits = re.split('; |, |;|,|# |\s+ |- ',"".join(message))
     print(subreddits)
+    
     #list of reddits
     reddit_list = []    
     
