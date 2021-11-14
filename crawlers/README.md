@@ -65,7 +65,7 @@ to create a new docker img, follow this cmds [(or create a pipeline and a app in
 docker build --tag telegram-bot .
 docker run -e TOKEN=TELEGRAM_API_TOKEN_HERE -dp 80:80 telegram-bot
 ```
-note: Heroku are not compatible with docker compose
+<b>note</b>: Heroku are not compatible with docker compose.</br>
 Access your [localhost](https://localhost:80) to start the bot
 
 
@@ -82,7 +82,7 @@ $ heroku config:set TOKEN=TELEGRAM_API_TOKEN_HERE
 ```
 
 #### 3.6 Deploying through Heroku<a id="BuildingApp_4_2"></a>
-First you need go to ``Dockerfile`` and change ``80`` -> ``$PORT`` in row 11. Heroku define one port by dyno and needs to control it dynamically.
+First you need go to ``Dockerfile`` and change ``80`` -> ``$PORT`` in row 11. Heroku define one port by dyno and needs to control it dynamically.</br>
 in your bash:
 
 ```
@@ -93,7 +93,7 @@ Makes the deployment
 ```
 heroku container:release web -a telegram-bot-challenge
 ```
-Access his web
+Access your app website to wake up the bot.
 
 ## 4 🕹 Using the bot in a chat<a id="Using"></a>
 To use the bot, send a message command follow this format: 
