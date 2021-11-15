@@ -3,7 +3,7 @@
 ## 📝 Description
 
 This application creates a telegram bot who scrap subredddits, fetching threads with more than 5k upvotes.</br>
-This app is part of a challenge proposed by Id Wall</br></br>
+It is part of a challenge proposed by idwall</br></br>
 
 <center><table class="center" border="0" style="border: 1px solid transparent">
  <tr valign="top"><td>    
@@ -36,7 +36,7 @@ Package versions used and dependencies are listed at ``requirements.txt``
 
 
 ### 2 💿 softwares required<a id="Software"></a>
-To use this app is needed:
+In order to use this app you'll need:
 - [python3](https://www.python.org/downloads/)
 - [Docker](https://www.docker.com/)
 - [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli)
@@ -53,8 +53,8 @@ $ git clone https://github.com/glauberdmo/desafios.git
 and uses /crawlers/ as root for the next steps
 
 ### 3.3 📲Creating a telegram bot<a id="BuildingApp_2"></a>
-First create a bot through telegram app talking with @botfather, if you don't know how to do that follow the [official documentation](https://core.telegram.org/bots#3-how-do-i-create-a-bot)
-you will need to make this step to get his token with telegram API
+Firstly, create a bot through the telegram app by talking to the @botfather, if you don't know how to do that please follow the [official documentation](https://core.telegram.org/bots#3-how-do-i-create-a-bot).</br>
+You will need to go through this step to get his token with telegram API
 
 
 ### 3.4 🐳 Running locally through Docker<a id="BuildingApp_3"></a>
@@ -65,7 +65,7 @@ to create a new docker img, follow this cmds [(or create a pipeline and a app in
 docker build --tag telegram-bot .
 docker run -e TOKEN=TELEGRAM_API_TOKEN_HERE -dp 80:80 telegram-bot
 ```
-<b>note</b>: Heroku are not compatible with docker compose.</br>
+<b>note</b>: Heroku is not compatible with docker compose.</br>
 Access your [localhost](https://localhost:80) to start the bot
 
 

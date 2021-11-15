@@ -1,7 +1,7 @@
 ## String solution
 
 ### Solution description
-Was asked to be developed a way to break a string using a char delimiter by row as parameter.</br>
+It was asked the development of a way to break a string in rows, using a number of characteres as delimiter.</br>
 To do that was made a class called TextBreaker with a method to break the string by row
 	
 ### Setup
@@ -42,6 +42,6 @@ first_row = OutputText[0]
 ```
 
 2 - The justify method was implemented using a random distribution 🍀.</br>
-<b>BUT DO NOT WORRY</b>, the result printing each time always will be the same, the seed was frozen.
-This aproach is cool because increasing the delimiter flats the distribution of the spaces (the number of spaces increases faster than the average of words by row).</br></br>
+<b>BUT DO NOT WORRY</b>, the result printed each time will always will be the same, the seed was frozen.
+ This approach is cool because by increasing the delimiter it flats the distribution of the spaces (the number of spaces increases faster than the average of words per row).</br></br>
 ![](https://memegenerator.net/img/instances/50042869.jpg)

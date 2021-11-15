@@ -16,7 +16,7 @@ class TextBreaker:
         
         #verifies if breaks are possible
         if max(self.words_lenght) > self.row_length:
-            raise ValueError("There is at least one word with lenght > than row lenght")
+            raise ValueError("There is at least one word with length > than row lenght")
 
         #breaks rows
         self._break_to_rows()
