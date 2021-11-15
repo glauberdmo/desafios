@@ -3,7 +3,12 @@
 ### Solution description
 It was asked the development of a way to break a string in rows, using a number of characteres as delimiter.</br>
 To do that was made a class called TextBreaker with a method to break the string by row
-	
+
+### 1 📦 Packages<a id="Packages"></a>
+The packages used in this project were:
+- **pyTest**: used for testing 
+- **Faker**: used to generate fake data, improving testing quality
+
 ### Setup
 To run this project first you need to clone the repository:
 ```
@@ -31,7 +36,11 @@ This method will return the string broken by row in your terminal
 ```
 OutputText.print_rows()
 ```
-
+### Tests
+In Strings/solucao run:
+```
+pytest -s -v
+```
 
 ### Extras
 
