@@ -100,9 +100,9 @@ Access your app website to wake up the bot.
 ## 4 🕹 Using the bot in a chat<a id="Using"></a>
 To use the bot, send a message command following this format: 
 ```
-/npf | /nadaprafazer subrredit_name1 subrredit_name2 ...
+/npf | /nadaprafazer subreddit_name1 subreddit_name2 ...
 ```
-the subrredits names can be separated with any symbol, except "_"</br>
+the subreddits names can be separated with any symbol, except "_"</br>
 
 ## 5 👁‍🗨 Running tests<a id="tests"></a>
 It uses pytests to run the tests.</br>
