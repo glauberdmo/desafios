@@ -18,7 +18,7 @@ It is part of a challenge proposed by idwall</br></br>
     <a href="#BuildingApp_4">3.4 Heroku Deployment</a></br>
     <a href="#BuildingApp_4_1">3.4.1 Creating a new app in heroku</a></br>
     <a href="#BuildingApp_4_2">3.4.2 Deploying through Heroku</a></br> 
-    <a href="#Using">4 Using the bot in a chat</a>
+    <a href="#Using">4 Using the bot in a chat</a></br> 
     <a href="#tests">5 running tests</a>
     </td>
     <td><img src="img/using_snoospiderbot.gif"></td>
