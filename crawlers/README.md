@@ -62,7 +62,7 @@ You will need to go through this step to get his token with telegram API
 ### 3.4 🐳 Running locally through Docker<a id="BuildingApp_3"></a>
 
 #### 3.4.1 Creating images and running containers<a id="BuildingApp_3_1"></a>
-to create a new docker img, follow this cmds [(or create a pipeline and a app inside)](https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-pipelines-add-pipeline):
+to create a new docker img, follow this cmds 
 ```
 docker build --tag telegram-bot .
 docker run -e TOKEN=TELEGRAM_API_TOKEN_HERE -dp 80:80 telegram-bot
@@ -74,6 +74,7 @@ Access your [localhost](https://localhost:80) to start the bot
 ### 3.4.2 Heroku Deployment<a id="BuildingApp_4"></a>
 #### 3.5 Creating a new app in heroku<a id="BuildingApp_4_1"></a>
 **you can skip this section if wants to run it locally through docker or use other container based service**
+[(you can create a pipeline and a app inside instead)](https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-pipelines-add-pipeline):
 ```
 $ heroku apps:create [APP]
 ```
