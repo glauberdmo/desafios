@@ -73,7 +73,7 @@ Access your [localhost](https://localhost:80) to start the bot
 
 ### 3.4.2 Heroku Deployment<a id="BuildingApp_4"></a>
 #### 3.5 Creating a new app in heroku<a id="BuildingApp_4_1"></a>
-**you can skip this section if wants to run it locally through docker or use other container based service**
+**you can skip this section if wants to run it locally through docker or use other container based service**</br>
 [(you can create a pipeline and a app inside instead)](https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-pipelines-add-pipeline):
 ```
 $ heroku apps:create [APP]
