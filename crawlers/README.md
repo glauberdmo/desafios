@@ -19,6 +19,7 @@ It is part of a challenge proposed by idwall</br></br>
     <a href="#BuildingApp_4_1">3.4.1 Creating a new app in heroku</a></br>
     <a href="#BuildingApp_4_2">3.4.2 Deploying through Heroku</a></br> 
     <a href="#Using">4 Using the bot in a chat</a>
+    <a href="#tests">5 running tests</a>
     </td>
     <td><img src="img/using_snoospiderbot.gif"></td>
  </tr>
@@ -31,6 +32,7 @@ The packages used in this project were:
 - **python-telegram-bot**: framework that implements telegram API to handle requests through pooling or webhook (was used pooling in this project)
 - **Flask**: the docker container run in a heroku service using a free account who shutdown with 30 min of innactivity, was used flask to route a resource that can wake up the service easily
 - **Gunicorn**: process incoming HTTP requests `concurrently`. the built-in Flask web server has `blocking` behavior and stops to answer while scraping is being executed
+- **PyTest**: allows to run tests in the project</br>
 
 Package versions used and dependencies are listed at ``requirements.txt`` 
 
@@ -100,6 +102,13 @@ To use the bot, send a message command following this format:
 ```
 /npf | /nadaprafazer subrredit_name1 subrredit_name2 ...
 ```
-the subrredits names can be separated with any symbol, except "_"
+the subrredits names can be separated with any symbol, except "_"</br>
+
+## 5 👁‍🗨 Running tests<a id="Using"></a>
+It uses pytests to run the tests.</br>
+In /crawler/ run:
+```
+pytest -s -v
+```
 
 

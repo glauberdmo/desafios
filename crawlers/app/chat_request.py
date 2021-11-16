@@ -1,5 +1,8 @@
-import reddit_scraper
 import re
+
+import reddit_scraper
+
+
 
 #Image used when no hot threads are found
 IMAGE_SNOO_SAD = "https://i.redd.it/okvqywqn2jd31.png"
@@ -14,9 +17,6 @@ def _get_chat_request(message:str):
     subreddits = []  
     for sub in message:        
         subreddits.append(re.sub(r'[^\w]', '', sub))
-
-    #subreddits = re.split('; |, |;|,|# |\s+ |- ',"".join(message))
-    print(subreddits)
     
     #list of reddits
     reddit_list = []    
@@ -24,23 +24,30 @@ def _get_chat_request(message:str):
     #Create scraper object
     Scraper = reddit_scraper.RedditScraper()
 
-    for subreddit in subreddits:
+    for i, subreddit in enumerate(subreddits):
         Scraper.get_sub_reddit(subreddit)
 
         #verifies if subreddit exists
-        if not Scraper.subreddit_exists:
-            continue
+        if not Scraper.subreddit_exists():
+            subreddits[i] += " does not exist!"
+            reddit_list.append({'title':subreddits[i],'votes':"",'thread_link':"",'comments_link':""})
         else:
-            reddit_list.append(Scraper.as_list())
-        
+            if not Scraper.hot_thread_exists():
+                subreddits[i] += " does not have hot threads"
+                reddit_list.append({'title':subreddits[i],'votes':"",'thread_link':"",'comments_link':""})
+            else:
+                reddit_list.append(Scraper.as_list())
+
     return subreddits, reddit_list
 
 def get_request_result(reddit_list:str)->str:
     answer:list[str] = []
-    subreddit_name, subreddits = _get_chat_request(reddit_list)
-    if subreddits is not None:
-        for i, sub in enumerate(subreddits):
-            answer.append(f"<b>{subreddit_name[i]}</b>")
+    subreddit_name, subreddits_content = _get_chat_request(reddit_list)
+    for i, sub in enumerate(subreddits_content):
+        answer.append(f"<b>{subreddit_name[i]}</b>")
+        if "does not exist" in subreddit_name[i] or "does not have hot threads" in subreddit_name[i]:
+            continue
+        else:
             for thread in sub:    
                 #avoid adding the same thread link twice when link is not external    
                 if 'www.reddit.com' in thread['thread_link']:

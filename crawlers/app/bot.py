@@ -1,7 +1,9 @@
-from telegram.ext import Updater, CommandHandler
 import os
-from chat_request import get_request_result
+
+from telegram.ext import Updater, CommandHandler
 from flask import Flask
+
+from chat_request import get_request_result
 
 #env variables defined in heroku
 TOKEN = os.getenv("TOKEN")
@@ -40,7 +42,10 @@ def help(update, context):
     update.message.reply_text(text=texto,parse_mode="HTML")
 
 def main():
-    
+    """
+        Initializes the bot
+    """
+
     #Pass token to python-telegram-bot
     updater = Updater(TOKEN, use_context=True)
 
@@ -49,15 +54,7 @@ def main():
     updater.dispatcher.add_handler(CommandHandler("nadaprafazer", get_hot_subreddits))
     updater.dispatcher.add_handler(CommandHandler("help", help))
 
-    #webhook
-    #updater.start_webhook(listen="0.0.0.0",
-    #                      port=int(PORT),
-    #                      url_path=TOKEN,               
-    #                      webhook_url = 'https://telegram-bot-challenge.herokuapp.com/' + TOKEN)
-    
-    #stay idle until receive a signal from telegram
-    #updater.idle()
-
+    #get updates polling API
     updater.start_polling()
 
     
