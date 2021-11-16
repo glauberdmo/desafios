@@ -25,7 +25,7 @@ USER_AGENT = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:94.0) G
 
 class RedditScraper():
     """
-    This clas allows to get the most upvotes threads from a subreddit
+    This class allows to get the most upvotes threads from a subreddit
     """
     def __init__(self):
         self.subreddit_html = ""

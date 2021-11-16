@@ -1,11 +1,12 @@
 from .text_breaker import TextBreaker
 from faker import Faker
 import random
-'''
-Tests with text_breaker.py
-'''
+
 def test_text_breaker_01():
-    #Assure that the lentgh of the text is less than row_length
+    '''
+    Tests with text_breaker.py
+    Assure that the lentgh of the text is less than row_length
+    '''  
 
     #Given
     fake = Faker()
