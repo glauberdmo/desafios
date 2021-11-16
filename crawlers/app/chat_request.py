@@ -7,6 +7,7 @@ import reddit_scraper
 #Image used when no hot threads are found
 IMAGE_SNOO_SAD = "https://i.redd.it/okvqywqn2jd31.png"
 
+
 def _get_chat_request(message:str):
     """
     Return valid subreddits and their respective contents
@@ -15,9 +16,18 @@ def _get_chat_request(message:str):
     """
     #get just subreddits
     subreddits = []  
+    subreddits_not_flat = []
     for sub in message:        
-        subreddits.append(re.sub(r'[^\w]', '', sub))
+        subreddits_not_flat.append(re.split(r'[^\w]', sub))
     
+    # appending elements to the flat_list
+    for sub in subreddits_not_flat:  
+        subreddits += sub
+    #removing '' from the list
+    for sub in subreddits:
+        if sub == '':
+            subreddits.remove(sub)
+
     #list of reddits
     reddit_list = []    
     
@@ -60,3 +70,4 @@ def get_request_result(reddit_list:str)->str:
     if answer == []:
         answer.append("Nada bombando no momento" + f"<a href='{IMAGE_SNOO_SAD}'>.</a>")
     return answer
+
