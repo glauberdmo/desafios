@@ -1,6 +1,9 @@
 import random
 class TextBreaker:
-
+    """
+    Break the text into rows
+    Allows alignment of the text: object.alignment_justify(), object.alignment_left(), object.alignment_right()
+    """
     def __init__(self, text:str, row_length:int):
         self.text = text
         self.row_length = row_length        
