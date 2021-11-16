@@ -1,5 +1,5 @@
-from app.reddit_scraper import RedditScraper
-from app.chat_request import *
+from reddit_scraper import RedditScraper
+
 # uses this file to run through CLI
 if __name__=="__main__":
     Scraper = RedditScraper()
