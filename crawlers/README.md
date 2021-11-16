@@ -104,7 +104,7 @@ To use the bot, send a message command following this format:
 ```
 the subrredits names can be separated with any symbol, except "_"</br>
 
-## 5 👁‍🗨 Running tests<a id="Using"></a>
+## 5 👁‍🗨 Running tests<a id="tests"></a>
 It uses pytests to run the tests.</br>
 In /crawler/ run:
 ```
