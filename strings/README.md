@@ -9,7 +9,7 @@ The packages used in this project were:
 - **pyTest**: used for testing 
 - **Faker**: used to generate fake data, improving testing quality
 
-### Setup
+### 2 ⚙️Setup
 To run this project first you need to clone the repository:
 ```
 git clone https://github.com/glauberdmo/desafios.git   
@@ -36,13 +36,13 @@ This method will return the string broken by row in your terminal
 ```
 OutputText.print_rows()
 ```
-### Tests
+### 3 👁‍🗨 Tests
 In Strings/solucao run:
 ```
 pytest -s -v
 ```
 
-### Extras
+### 4 🍒Extras
 
 1 - Is possible to access this object as list, there is a magic method implemented🧙‍♂️
 
